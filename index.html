@@ -11,46 +11,69 @@
 </head>
 <body>
 
+    <!-- header -->
     <header class="header">
         <h1>highlow game</h1>
         <p>an awesome hi-lo card game</p>
     </header>
 
-    <main class="board"></main>
+    <!-- main section -->
+    <main class="game">
 
-    <footer class="footer">
-        <div class="col">
-            <section class="instructions">
-                <h2>Instructions:</h2>
-                <p>Hi-Lo, or High-Low, is a fairly simple card game. It uses a standard deck of 52 cards, and it has players guessing whether a certain card is higher or lower than the one showing on the table. After each turned card, you can finish the game and take the money or continue and try to win the highest price! But, if you lose, you lose everything ok? Let's make money.</p>
+        <!-- board -->
+        <section class="board"></section>
+        
+        <!-- instructions and controls -->
+        <div class="row">
+            <div class="col">
 
-                <h2>Cards:</h2>
-                <ul class="card-list">
-                    <li>A</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                    <li>8</li>
-                    <li>9</li>
-                    <li>10</li>
-                    <li>J</li>
-                    <li>Q</li>
-                    <li>K</li>
-                </ul>
-            </section>
+                <!-- instructions -->
+                <section class="instructions">
+                    <h2>Instructions</h2>
+                    <p>Hi-Lo, or High-Low, is a fairly simple card game. It uses a standard deck of 52 cards, and it has players guessing whether a certain card is higher or lower than the one showing on the table. After each turned card, you can finish the game and take the money or continue and try to win the highest price! But, if you lose, you lose everything ok? Let's make money.</p>
+
+                    <h2>Cards</h2>
+                    <ul class="card-list">
+                        <li>A</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>J</li>
+                        <li>Q</li>
+                        <li>K</li>
+                    </ul>
+                </section>
+            </div>
+            
+            <div class="col">
+
+                <!-- controls -->
+                <section class="controls">
+                    <h2>Start Game</h2>
+                    <ul class="start-buttons">
+                        <li data-value="10" class="btn">10$</li>
+                        <li data-value="50" class="btn">50$</li>
+                        <li data-value="100" class="btn">100$</li>
+                    </ul>
+
+                    <h2>Actions</h2>
+                    <ul class="action-buttons">
+                        <li class="btn a-high">higher</li>
+                        <li class="btn a-low">lower</li>
+                        <li class="btn btn-large a-cashout">cash out</li>
+                    </ul>
+                </section>
+            </div>
         </div>
-        <div class="col">
-            <section class="share">
-                
-            </section>
-            <section class="author">
-                
-            </section>
-        </div>
-    </section>
+    </main>
+
+   
 
 
 </body>

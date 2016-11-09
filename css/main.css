@@ -8,9 +8,14 @@ body {
     font: 16px 'Roboto', sans-serif;
     background: #27ae60 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQYV2PUO1P4/5JJPyMDFMAZGAIwlRgqAFhNCAXLv59gAAAAAElFTkSuQmCC) repeat;
 }
+.row {
+    display: flex;
+    width: 960px;
+    margin: 0 auto;
+}
 .col {
-    display: inline-block;
     width: 50%;
+    padding: 20px;
 }
 
 /*
@@ -39,15 +44,11 @@ body {
     Footer
   ========================================
 */
-.footer {
-    width: 960px;
-    margin: 0 auto;
-}
-.footer h2 {
+.game h2 {
     font: 20px 'Patua One', sans-serif;
     margin-bottom: 10px;
 }
-.footer p {
+.game p {
     margin-bottom: 20px;
 }
 
