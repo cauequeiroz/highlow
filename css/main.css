@@ -66,7 +66,7 @@ body {
     margin-bottom: 20px;
 }
 
-.card-list li {
+.instructions li {
     display: inline-block;
     width: 25px;
     font: 18px 'Patua One', sans-serif;
@@ -76,6 +76,11 @@ body {
     border: 1px solid #ecf0f1;
 }
 
+/*
+  ========================================
+    Controls
+  ========================================
+*/
 .start-buttons {
     margin-bottom: 20px;
     display: flex;
@@ -109,3 +114,32 @@ body {
     border-bottom-left-radius: 0;
     border-left: none;
 }
+
+.board {
+    border-top: 1px solid #ecf0f1;    
+}
+
+/*
+  ========================================
+    HUD
+  ========================================
+*/
+.hud {
+    width: 920px;
+    margin: 20px auto;
+    display: flex;
+}
+.hud li {
+    width: 50%;
+}
+.hud li + li {
+    text-align: right;
+}
+.hud .title {
+    font: 20px 'Patua One', sans-serif;
+}
+.hud .value {
+    display: block;
+    font-size: 26px;
+}
+
