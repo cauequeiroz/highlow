@@ -151,13 +151,49 @@ body {
     margin: 40px 0;
 }
 .card-list li {
+    perspective: 1000px;
+    position: relative;
     display: inline-block;
-    width: 60px;
-    font: 18px 'Patua One', sans-serif;
-    text-align: center;
-    padding: 25px 0;
     margin: 0 10px;
+    cursor: pointer;
+}
+
+.card-list li {
+
+}
+.card-list li:hover .flipper,
+.card-list li.turn .flipper {
+    transform: rotateX(180deg);
+}
+.card-list li, .front, .back {
+    width: 60px;
+    height: 75px;
+    border-radius: 5px;
+}
+
+.flipper {
+    position: relative;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    transform-origin: 100% 37px; /* half of height */   
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font: 25px 'Patua One', sans-serif;
     border-radius: 2px;
     border: 1px solid #ecf0f1;
     background: rgba(255, 255, 255, 0.2);
+    line-height: 75px;
+}
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateX(0deg);
+}
+.back {
+    transform: rotateX(-180deg);
 }
