@@ -7,7 +7,9 @@ body {
     color: #ecf0f1;
     font: 16px 'Roboto', sans-serif;
     background: #27ae60 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQYV2PUO1P4/5JJPyMDFMAZGAIwlRgqAFhNCAXLv59gAAAAAElFTkSuQmCC) repeat;
+    font-weight: 300;
 }
+
 .row {
     display: flex;
     width: 960px;
@@ -16,6 +18,19 @@ body {
 .col {
     width: 50%;
     padding: 20px;
+}
+
+.btn {
+    border-radius: 2px;
+    border: 1px solid #ecf0f1;
+    padding: 10px 0;
+    transition: all .2s ease;
+    text-align: center;
+}
+.btn:hover, .selected {
+    background: #ecf0f1;
+    color: #27ae60;
+    cursor: pointer;
 }
 
 /*
@@ -35,13 +50,12 @@ body {
     margin-bottom: 10px;
 }
 .header p {
-    font-size: 22px;
-    font-weight: 300;
+    font-size: 22px;    
 }
 
 /*
   ========================================
-    Footer
+    Game
   ========================================
 */
 .game h2 {
@@ -60,4 +74,38 @@ body {
     padding: 4px 0;
     border-radius: 2px;
     border: 1px solid #ecf0f1;
+}
+
+.start-buttons {
+    margin-bottom: 20px;
+    display: flex;
+}
+.start-buttons .btn {
+    width: 33%;
+    margin-right: 10px;
+}
+.start-buttons .btn:last-child {
+    margin-right: 0;
+}
+
+.action-buttons .btn {
+    width: 50%;
+    float: left;
+    margin-bottom: 10px;
+}
+.action-buttons .btn-large {
+    width: 100%;
+}
+
+.high, .low {
+    padding: 16px 0;
+}
+.high {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.low {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
 }
