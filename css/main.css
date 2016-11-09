@@ -28,8 +28,7 @@ body {
     text-align: center;
 }
 .btn:hover, .selected {
-    background: #ecf0f1;
-    color: #27ae60;
+    background: rgba(255, 255, 255, 0.2);
     cursor: pointer;
 }
 
@@ -157,6 +156,8 @@ body {
     font: 18px 'Patua One', sans-serif;
     text-align: center;
     padding: 25px 0;
+    margin: 0 10px;
     border-radius: 2px;
     border: 1px solid #ecf0f1;
+    background: rgba(255, 255, 255, 0.2);
 }
