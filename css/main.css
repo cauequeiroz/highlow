@@ -125,8 +125,7 @@ body {
   ========================================
 */
 .hud {
-    width: 920px;
-    margin: 20px auto;
+    margin: 0 auto 20px;
     display: flex;
 }
 .hud li {
@@ -143,3 +142,21 @@ body {
     font-size: 26px;
 }
 
+/*
+  ========================================
+    Card list
+  ========================================
+*/
+.card-list {
+    text-align: center;
+    margin: 40px 0;
+}
+.card-list li {
+    display: inline-block;
+    width: 60px;
+    font: 18px 'Patua One', sans-serif;
+    text-align: center;
+    padding: 25px 0;
+    border-radius: 2px;
+    border: 1px solid #ecf0f1;
+}
