@@ -1,0 +1,62 @@
+/*
+  ========================================
+    Basic styles
+  ========================================
+*/
+body {
+    color: #ecf0f1;
+    font: 16px 'Roboto', sans-serif;
+    background: #27ae60 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQYV2PUO1P4/5JJPyMDFMAZGAIwlRgqAFhNCAXLv59gAAAAAElFTkSuQmCC) repeat;
+}
+.col {
+    display: inline-block;
+    width: 50%;
+}
+
+/*
+  ========================================
+    Header
+  ========================================
+*/
+.header {
+    width: 500px;
+    border: 5px solid #ecf0f1;
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px 0;    
+}
+.header h1 {
+    font: 52px 'Patua One', sans-serif;
+    margin-bottom: 10px;
+}
+.header p {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+/*
+  ========================================
+    Footer
+  ========================================
+*/
+.footer {
+    width: 960px;
+    margin: 0 auto;
+}
+.footer h2 {
+    font: 20px 'Patua One', sans-serif;
+    margin-bottom: 10px;
+}
+.footer p {
+    margin-bottom: 20px;
+}
+
+.card-list li {
+    display: inline-block;
+    width: 25px;
+    font: 18px 'Patua One', sans-serif;
+    text-align: center;
+    padding: 4px 0;
+    border-radius: 2px;
+    border: 1px solid #ecf0f1;
+}
