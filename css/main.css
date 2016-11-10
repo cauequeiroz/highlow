@@ -155,13 +155,7 @@ body {
     position: relative;
     display: inline-block;
     margin: 0 10px;
-    cursor: pointer;
 }
-
-.card-list li {
-
-}
-.card-list li:hover .flipper,
 .card-list li.turn .flipper {
     transform: rotateX(180deg);
 }

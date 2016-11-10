@@ -9,6 +9,8 @@ var Game = {
     
     betValue: 0,
 
+    level: 0,
+
     init: function() {
         document.querySelector('.start-buttons').addEventListener('click', Game.play, false);
     },
@@ -24,6 +26,7 @@ var Game = {
         Game.bank -= Game.betValue;
         Game.updateHUD();
         Game.turnCard();
+        Game.nextLevel();
     },
 
     canPlay: function() {
@@ -36,7 +39,19 @@ var Game = {
     },
 
     turnCard: function() {
-        console.log('lets play');
+        var card = Card.getRandomCard(),
+            elem = document.querySelectorAll('.card-list li')[Game.level];
+
+        elem.querySelector('.back').innerHTML = card.name;
+        elem.setAttribute('data-ref', card.ref); 
+    },
+
+    nextLevel: function() {
+        document.querySelectorAll('.card-list li')[Game.level].classList.add('turn');
+
+        Game.level++;
+        Game.turnCard();
+        Game.allowUser = true;
     }
 }
 Game.init();
