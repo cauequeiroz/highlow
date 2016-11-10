@@ -19,6 +19,9 @@ var Card = {
     getRandomCard: function() {
         var n = Math.floor( Math.random() * 13 + 1 );
 
-        return { name: this.cards[n], ref: n };
+        return {
+            name: this.cards[n],
+            ref: n
+        };
     }
 }
