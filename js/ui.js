@@ -10,11 +10,9 @@ var UI = {
         document.querySelector('.reward').innerHTML = '$ ' + info.reward;
     },
 
-    changeCard: function(card, value, ref) {
+    changeCard: function(card, value) {
         var elem = document.querySelectorAll('.card-list li')[card];
-
-        elem.setAttribute('data-ref', ref);
-        elem.querySelector('.back').innerHTML = value;
+            elem.querySelector('.back').innerHTML = value;
     },
 
     showCard: function() {

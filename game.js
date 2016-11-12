@@ -39,10 +39,15 @@ var Game = {
     },
 
     continue: function() {
-        Card.nextLevel();
-        Card.sortCard();
+        if ( Card.getLevel() < 7 ) {
+            Card.nextLevel();
+            Card.sortCard();
 
-        Game.allowUser = true;
+            Game.allowUser = true;
+        } else {
+            Money.cashout();
+            Game.restart();
+        }
     },
 
     actions: function(e) {
@@ -50,11 +55,13 @@ var Game = {
 
         var type = {
             'high': function() {
-                console.log('click on high')
+                var choice = Card.compare('high');
+                Game.result(choice);
             },
 
             'low': function() {
-                console.log('click on low')
+                var choice = Card.compare('low');
+                Game.result(choice);
             },
 
             'cashout': function() {
@@ -68,11 +75,25 @@ var Game = {
         type[e.target.getAttribute('data-action')] () ;
     },
 
+    result: function(win) {
+        UI.showCard();
+        Game.allowUser = false;
+
+        setTimeout(function() {
+            if ( win ) {
+                Game.continue();
+            } else {
+                Game.restart();     
+            }
+        }, 1000);        
+    },
+
     restart: function() {
         Game.allowUser = Game.started = false;
 
-        UI.reset();
+        Money.reset();
         Card.reset();
+        UI.reset();
     }
 };
 Game.init();

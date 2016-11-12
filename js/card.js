@@ -25,7 +25,7 @@ var Card = {
 
         this.board.push(n);
 
-        UI.changeCard(this.level, value, n);
+        UI.changeCard(this.level, value);
     },
 
     getLevel: function() {
@@ -36,8 +36,19 @@ var Card = {
         this.level++;
     },
 
+    compare: function(value) {
+        var card_a = this.board[this.board.length-2],
+            card_b = this.board[this.board.length-1];
+
+        if ( value === "high" ) {
+            return card_b >= card_a;
+        } else {
+            return card_b <= card_a;
+        }
+    },
+
     reset: function() {
         this.level = 0;
         this.board = [];
-    }
+    },
 };
