@@ -39,7 +39,7 @@ var Game = {
     },
 
     continue: function() {
-        if ( Card.getLevel() < 7 ) {
+        if ( Card.getLevel() < 9 ) {
             Card.nextLevel();
             Card.sortCard();
 
@@ -81,6 +81,8 @@ var Game = {
 
         setTimeout(function() {
             if ( win ) {
+                Money.updateReward();
+                UI.updateHUD();
                 Game.continue();
             } else {
                 Game.restart();     

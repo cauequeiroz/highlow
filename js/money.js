@@ -1,7 +1,13 @@
 var Money = {
-    bank: 100,
+    bank: 50,
 
     reward: 0,
+
+    rewardList: {
+        10: [2,5,10,20,40,100,200,400,1000],
+        50: [10,25,50,100,200,500,1000,2000,5000],
+        100: [20,50,100,200,400,1000,2000,4000,10000]
+    },
 
     bet: 0,
 
@@ -23,6 +29,10 @@ var Money = {
 
     getReward: function() {
         return this.reward;
+    },
+
+    updateReward: function() {
+        this.reward = this.rewardList[this.bet][Card.getLevel()-1];
     },
 
     cashout: function() {
