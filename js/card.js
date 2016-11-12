@@ -30,5 +30,9 @@ var Card = {
 
     getLevel: function() {
         return this.level;
+    },
+
+    nextLevel: function() {
+        this.level++;
     }
 };

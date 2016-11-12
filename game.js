@@ -9,6 +9,8 @@
 var Game = {
     started: false,
 
+    allowUser: false,
+
     init: function() {
         document.querySelector('.start-buttons').addEventListener('click', Game.play, false);            
     },
@@ -27,10 +29,19 @@ var Game = {
         UI.selectButton(e.target);
         UI.updateHUD();
         UI.showCard();
+
+        Game.continue();
     },
 
     canPlay: function() {
         return !this.started && Money.canPlay();  
+    },
+
+    continue: function() {
+        Card.nextLevel();
+        Card.sortCard();
+
+        Game.allowUser = true;
     }
 };
 Game.init();
