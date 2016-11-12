@@ -13,11 +13,20 @@ var Money = {
         this.bet = +value;
     },
 
+    payBet: function() {
+        this.bank -= this.bet;
+    },
+
     getInfo: function() {
         return { bank: this.bank, reward: this.reward };
     },
 
-    payBet: function() {
-        this.bank -= this.bet;
+    getReward: function() {
+        return this.reward;
+    },
+    
+    cashout: function() {
+        this.bank += this.reward;
+        this.reward = 0;
     }
 };

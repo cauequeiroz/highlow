@@ -34,5 +34,10 @@ var Card = {
 
     nextLevel: function() {
         this.level++;
+    },
+
+    reset: function() {
+        this.level = 0;
+        this.board = [];
     }
 };

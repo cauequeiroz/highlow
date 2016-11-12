@@ -21,5 +21,12 @@ var UI = {
         var n = Card.getLevel();
 
         document.querySelectorAll('.card-list li')[n].classList.add('turn');
+    },
+
+    reset: function() {
+        document.querySelectorAll('.card-list li').forEach(function(elem) {
+            elem.classList.remove('turn');
+        });
+        document.querySelector('.start-buttons .selected').classList.remove('selected');
     }
 };
