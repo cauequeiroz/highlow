@@ -8,5 +8,9 @@ var UI = {
 
         document.querySelector('.bank').innerHTML = '$ ' + info.bank;
         document.querySelector('.reward').innerHTML = '$ ' + info.reward;
-    }
+    },
+
+    changeCard: function(card, value) {},
+
+    showCard: function(card) {}
 };

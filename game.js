@@ -20,10 +20,13 @@ var Game = {
         
         Game.started = true;
 
-        Money.payBet();   
+        Money.payBet();
+
+        Card.sortCard();
 
         UI.selectButton(e.target);
         UI.updateHUD();
+        UI.showCard();
     },
 
     canPlay: function() {
