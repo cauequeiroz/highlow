@@ -20,8 +20,10 @@ var Game = {
         
         Game.started = true;
 
+        Money.payBet();   
+
         UI.selectButton(e.target);
-        UI.updateHUD();        
+        UI.updateHUD();
     },
 
     canPlay: function() {

@@ -15,5 +15,9 @@ var Money = {
 
     getInfo: function() {
         return { bank: this.bank, reward: this.reward };
+    },
+
+    payBet: function() {
+        this.bank -= this.bet;
     }
 };
