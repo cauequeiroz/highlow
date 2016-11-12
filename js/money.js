@@ -1,7 +1,7 @@
 var Money = {
     bank: 100,
 
-    reward: 0,
+    reward: 1548,
 
     bet: 0,
 
@@ -24,7 +24,7 @@ var Money = {
     getReward: function() {
         return this.reward;
     },
-    
+
     cashout: function() {
         this.bank += this.reward;
         this.reward = 0;

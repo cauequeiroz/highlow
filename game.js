@@ -52,11 +52,13 @@ var Game = {
             'high': function() {
                 console.log('click on high')
             },
+
             'low': function() {
                 console.log('click on low')
             },
+
             'cashout': function() {
-                if ( Money.getReward() ) {
+                if ( Money.getReward() ) {                    
                     Money.cashout();                    
                     Game.restart();
                 }
@@ -69,7 +71,6 @@ var Game = {
     restart: function() {
         Game.allowUser = Game.started = false;
 
-        UI.updateHUD();
         UI.reset();
         Card.reset();
     }

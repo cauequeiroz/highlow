@@ -28,5 +28,7 @@ var UI = {
             elem.classList.remove('turn');
         });
         document.querySelector('.start-buttons .selected').classList.remove('selected');
+
+        this.updateHUD();
     }
 };
