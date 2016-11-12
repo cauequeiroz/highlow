@@ -1,13 +1,19 @@
 var Money = {
-    bank: 50,
+    bank: 100,
+
+    reward: 0,
 
     bet: 0,
+
+    canPlay: function() {
+        return this.bank >= this.bet ? true : false;
+    },
 
     setBet: function(value) {
         this.bet = +value;
     },
 
-    canPlay: function() {
-        return this.bank >= this.bet ? true : false;
+    getInfo: function() {
+        return { bank: this.bank, reward: this.reward };
     }
 };
