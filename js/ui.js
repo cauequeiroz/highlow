@@ -19,10 +19,12 @@ var UI = {
         var n = Card.getLevel();
 
         document.querySelectorAll('.card-list li')[n].classList.add('turn');
+        Sound.play('flip');
     },
 
     reset: function() {
         document.querySelectorAll('.card-list li').forEach(function(elem) {
+            Sound.play('flip');
             elem.classList.remove('turn');
         });
         document.querySelector('.start-buttons .selected').classList.remove('selected');

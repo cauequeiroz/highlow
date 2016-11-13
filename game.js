@@ -81,10 +81,12 @@ var Game = {
 
         setTimeout(function() {
             if ( win ) {
+                Sound.play('right');
                 Money.updateReward();
                 UI.updateHUD();
                 Game.continue();
             } else {
+                Sound.play('wrong');
                 Game.restart();     
             }
         }, 600);        
