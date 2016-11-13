@@ -87,7 +87,7 @@ var Game = {
             } else {
                 Game.restart();     
             }
-        }, 1000);        
+        }, 600);        
     },
 
     restart: function() {
