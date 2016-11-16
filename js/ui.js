@@ -10,11 +10,6 @@ var UI = {
         document.querySelector('.reward').innerHTML = '$ ' + info.reward;
     },
 
-    changeCard: function(card, value) {
-        var elem = document.querySelectorAll('.card-list li')[card];
-            elem.querySelector('.back').innerHTML = value;
-    },
-
     showCard: function() {
         var n = Card.getLevel(),
             card = Card.getValue(Card.board[n]),
