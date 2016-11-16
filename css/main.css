@@ -97,6 +97,22 @@ body {
     transition: all .2s ease;
 }
 
+.gameover {
+    display: none;
+    text-align: center;
+    height: 80px;
+    margin: 40px 0!important;
+    padding-top: 28px;
+}
+.gameover .btn {
+    color: inherit;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.end .gameover { display: block; }
+.end .card-list { display: none; }
 /*
   ========================================
     Controls
@@ -167,6 +183,7 @@ body {
 .card-list {
     text-align: center;
     margin: 40px 0;
+    height: 80px;
 }
 .card-list li {
     perspective: 1000px;

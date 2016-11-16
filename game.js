@@ -100,6 +100,14 @@ var Game = {
         Money.reset();
         Card.reset();
         UI.reset();
+
+        if ( Money.getInfo().bank === 0 ) Game.gameover();
+    },
+
+    gameover: function() {
+        setTimeout(function() {
+            document.querySelector('.board').classList.add('end');
+        }, 800);
     }
 };
 Game.init();
