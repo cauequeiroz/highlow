@@ -1,5 +1,5 @@
 var Money = {
-    bank: 50,
+    bank: localStorage.getItem('highlow') || 50,
 
     reward: 0,
 
@@ -21,6 +21,7 @@ var Money = {
 
     payBet: function() {
         this.bank -= this.bet;
+        this.saveBank();
     },
 
     getInfo: function() {
@@ -37,6 +38,11 @@ var Money = {
 
     cashout: function() {
         this.bank += this.reward;
+        this.saveBank();
+    },
+
+    saveBank: function() {
+        localStorage.setItem('highlow', this.bank);
     },
 
     reset: function() {
