@@ -16,9 +16,13 @@ var UI = {
     },
 
     showCard: function() {
-        var n = Card.getLevel();
+        var n = Card.getLevel(),
+            card = Card.getValue(Card.board[n]),
+            elem = document.querySelectorAll('.card-list li')[n];
 
-        document.querySelectorAll('.card-list li')[n].classList.add('turn');
+        elem.querySelector('.back').innerHTML = card;
+        elem.classList.add('turn');
+        
         Sound.play('flip');
     },
 
