@@ -1,11 +1,19 @@
-/* ========================================
+/* ==================================================
 
     HighLow Game
     an awesome hi-lo card game
 
     By Caue Queiroz <cauenqueiroz@gmail.com>
 
-=========================================== */
+    js/card.js: Control board and card stuff
+    js/money.js: Control bank, reward and all payments
+    js/ui.js: Control changes on html
+    js/sound.js: Control all the sounds
+
+    game.js
+    Connect everything and make magic happen :)
+
+===================================================== */
 var Game = {
     started: false,
 
