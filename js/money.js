@@ -1,5 +1,5 @@
 var Money = {
-    bank: localStorage.getItem('highlow') || 50,
+    bank: null,
 
     reward: 0,
 
@@ -43,9 +43,16 @@ var Money = {
 
     saveBank: function() {
         localStorage.setItem('highlow', this.bank);
-    },
+    },  
+
+    generateBank: function() {
+        var b = localStorage.getItem('highlow');
+
+        this.bank = ( b === null || b === "0" ) ? 50 : b;
+    },  
 
     reset: function() {
         this.reward = this.bet = 0;
     }
 };
+Money.generateBank();

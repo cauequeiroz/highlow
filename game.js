@@ -13,7 +13,9 @@ var Game = {
 
     init: function() {
         document.querySelector('.start-buttons').addEventListener('click', Game.play, false);
-        document.querySelector('.action-buttons').addEventListener('click', Game.actions, false);          
+        document.querySelector('.action-buttons').addEventListener('click', Game.actions, false);
+
+        UI.updateHUD();      
     },
 
     play: function(e) {
