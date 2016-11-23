@@ -109,7 +109,7 @@ var Game = {
         Card.reset();
         UI.reset();
 
-        if ( Money.getInfo().bank === 0 ) Game.gameover();
+        if ( Money.getInfo().bank > 10 ) Game.gameover();
     },
 
     gameover: function() {
